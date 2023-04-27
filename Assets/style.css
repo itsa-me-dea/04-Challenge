@@ -1,0 +1,101 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 110%;
+  background-color: #1e1e1e;
+  color: white
+}
+
+h1 {
+  font-size: 150%;
+}
+
+.quiz, .highscores {
+  margin: 150px auto;
+  max-width: 600px;
+}
+
+p {
+  margin: 15px 20px;
+}
+
+.cover {
+  text-align: center;
+}
+
+/* .scoresHeader {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+} */
+
+.timer {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+button {
+  display: inline-block;
+  margin: 20px 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #de8328;
+  border-radius: 5px;
+  border: 0;
+  padding: 20px;
+}
+
+button:hover {
+  background-color: #c07c39;
+}
+
+.options button {
+  display: block;
+}
+
+input[type="text"] {
+  font-size: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.right-wrong {
+  font-style: bold;
+  font-size: 120%;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+ol {
+  padding-left: 15px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+li {
+  padding: 5px;
+  list-style: decimal inside none;
+}
+
+/* li:nth-child(odd) {
+  background-color: #dfdae7;
+} */
+
+#username {
+  background-color: white;
+  color: black;
+  padding-left: 5px;
+}
+
+#submit-score, #try-again {
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
