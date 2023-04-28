@@ -30,6 +30,7 @@ You can select the try "try again" button to go back to the landing page and see
 
 * Add button to refresh the page: https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click
 * Response to enter key: https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+* How to sort the scores in order: https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
 * Use of `forEach`: https://www.w3schools.com/jsref/jsref_foreach.asp
 * A variety of topics and code were utilized and adapted from UCSD-VIRT-FSF-PT-03-2023-U-LOLC/03-JavaScript/01-Activities
 * A variety of topics and code were utilized and adapted from UCSD-VIRT-FSF-PT-03-2023-U-LOLC/03-Web-APIs/01-Activities
