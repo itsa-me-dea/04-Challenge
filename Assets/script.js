@@ -34,6 +34,8 @@ var quizQuestions = [
   // dom elements from HTML
   var startScreenEl = document.getElementById("start-screen");
   var highscoreEl = document.getElementById("high-score")
+  var highscoreListEl = document.getElementById("highscore-list")
+  var startingEl = document.getElementById("quiz-start")
   var startBtn = document.getElementById("start");
   var timerEl = document.getElementById("timer");
   var questionsBoxEl = document.getElementById("questions");
@@ -123,12 +125,11 @@ function countDown() {
   }
 }
 
-// save username and score to local
+// save username and score to local storage
 function saveHighscore() {
   var username = usernameEl.value.trim();
   if (username !== "") {
-    var highscores =
-      JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
     var newScore = {
       score: timeLeft,
       name: username
@@ -138,11 +139,26 @@ function saveHighscore() {
   }
 }
 
+// display highscores on front page
+function displayHighscore() {
+  var highscores = JSON.parse(window.localStorage.getItem("highscores"));
+  highscores.sort(function(a, b) {
+    return b.score - a.score;
+  });
+  highscores.forEach(function(score) {
+    var liTag = document.createElement("li");
+    liTag.textContent = score.name + " - " + score.score;
+    highscoreListEl.appendChild(liTag);
+  });
+}
+
+displayHighscore()
+
 // save score when submit button clicked
 // https://www.w3schools.com/jsref/event_onclick.asp
 submitBtn.addEventListener("click", function(event) {
-  usernameEl.setAttribute("style", "color: green");
-  saveHighscore
+  usernameEl.setAttribute("style", "color: rgb(119, 199, 54)");
+  saveHighscore();
 });
 
 // save score when enter key used
@@ -158,31 +174,3 @@ usernameEl.addEventListener("keypress", function(event) {
   }
 });
 
-
-
-
-// ----------------- hscore.js ----------------- 
-// var scoresBtn = document.querySelector("#view-high-scores");
-
-// Rank previous scores in order by retrieving scores from localStorage
-
-function printHighscores() {
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-    highscores.sort(function(a, b) {
-      return b.score - a.score;
-    });
-    highscores.forEach(function(score) {
-      var liTag = document.createElement("li");
-      liTag.textContent = score.name + " - " + score.score;
-      var olEl = document.getElementById("highscores");
-      olEl.appendChild(liTag);
-    });
-}
-
-// Clear previous scores when users click clear 
-  function clearHighscores() {
-    window.localStorage.removeItem("highscores");
-    window.location.reload();
-  } document.getElementById("clear").onclick = clearHighscores;
-  
-printHighscores();

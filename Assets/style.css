@@ -9,29 +9,19 @@ h1 {
   font-size: 150%;
 }
 
-.quiz, .highscores {
-  margin: 150px auto;
-  max-width: 600px;
+ol {
+  padding-left: 15px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+li {
+  padding: 5px;
+  list-style: decimal inside none;
 }
 
 p {
   margin: 15px 20px;
-}
-
-.cover {
-  text-align: center;
-}
-
-/* .scoresHeader {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-} */
-
-.timer {
-  position: absolute;
-  top: 15px;
-  right: 25px;
 }
 
 button {
@@ -49,12 +39,27 @@ button:hover {
   background-color: #c07c39;
 }
 
-.options button {
-  display: block;
-}
-
 input[type="text"] {
   font-size: 100%;
+}
+
+.quiz, .highscores {
+  margin: 150px auto;
+  max-width: 600px;
+}
+
+.cover {
+  text-align: center;
+}
+
+.timer {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.options button {
+  display: block;
 }
 
 .hide {
@@ -71,21 +76,6 @@ input[type="text"] {
   background-color: white;
   border-radius: 5px;
 }
-
-ol {
-  padding-left: 15px;
-  max-height: 600px;
-  overflow: auto;
-}
-
-li {
-  padding: 5px;
-  list-style: decimal inside none;
-}
-
-/* li:nth-child(odd) {
-  background-color: #dfdae7;
-} */
 
 #username {
   background-color: white;
