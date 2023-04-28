@@ -140,6 +140,8 @@ function saveHighscore() {
 }
 
 // display highscores on front page
+// sort the scores --> https://stackoverflow.com/questions/1063007/how-to-sort-an-array-of-integers-correctly
+// forEach --> https://www.w3schools.com/jsref/jsref_foreach.asp
 function displayHighscore() {
   var highscores = JSON.parse(window.localStorage.getItem("highscores"));
   highscores.sort(function(a, b) {
@@ -147,7 +149,7 @@ function displayHighscore() {
   });
   highscores.forEach(function(score) {
     var liTag = document.createElement("li");
-    liTag.textContent = score.name + " - " + score.score;
+    liTag.textContent = score.name + ": " + score.score;
     highscoreListEl.appendChild(liTag);
   });
 }
@@ -155,7 +157,6 @@ function displayHighscore() {
 displayHighscore()
 
 // save score when submit button clicked
-// https://www.w3schools.com/jsref/event_onclick.asp
 submitBtn.addEventListener("click", function(event) {
   usernameEl.setAttribute("style", "color: rgb(119, 199, 54)");
   saveHighscore();
@@ -164,11 +165,8 @@ submitBtn.addEventListener("click", function(event) {
 // save score when enter key used
 // https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
 usernameEl.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
   if (event.key === "Enter") {
-    // Cancel the default action, if needed
     event.preventDefault();
-    // Trigger the button element with a click
     usernameEl.setAttribute("style", "color: rgb(119, 199, 54)");
     saveHighscore();
   }
