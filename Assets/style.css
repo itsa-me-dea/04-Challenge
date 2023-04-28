@@ -10,14 +10,14 @@ h1 {
 }
 
 ol {
-  padding-left: 15px;
   max-height: 600px;
   overflow: auto;
+  padding-left: 15px;
 }
 
 li {
-  padding: 5px;
   list-style: decimal inside none;
+  padding: 5px;
 }
 
 p {
@@ -25,14 +25,14 @@ p {
 }
 
 button {
+  background-color: #de8328;
   display: inline-block;
   margin: 20px 10px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #de8328;
+  padding: 20px;
   border-radius: 5px;
   border: 0;
-  padding: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 button:hover {
@@ -44,8 +44,8 @@ input[type="text"] {
 }
 
 .quiz, .highscores {
-  margin: 150px auto;
   max-width: 600px;
+  margin: 150px auto;
 }
 
 .cover {
@@ -67,25 +67,25 @@ input[type="text"] {
 }
 
 .right-wrong {
-  font-style: bold;
+  background-color: white;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
   font-size: 120%;
   color: black;
   text-align: center;
-  margin-top: 20px;
-  padding: 15px;
-  background-color: white;
-  border-radius: 5px;
+  font-style: bold;
 }
 
 #username {
   background-color: white;
-  color: black;
   padding-left: 5px;
+  color: black;
 }
 
 #submit-score, #try-again {
-  margin-top: 40px;
   display: block;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto
 }

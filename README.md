@@ -22,7 +22,7 @@ Once you reach the end or if you run out of time, you will be given your score. 
 
 You can select the try "try again" button to go back to the landing page and see your highscore. 
 
-<!-- Selecting the "clear" button will clear you local storage and highscore(s). -->
+Selecting the "clear" button will clear you local storage and highscore(s).
 
 ![Gif of my Coding Quiz website](Assets/Images/screen-capture.gif)
 
